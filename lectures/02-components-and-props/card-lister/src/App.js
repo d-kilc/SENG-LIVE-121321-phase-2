@@ -12,7 +12,7 @@ import CardList from './components/CardList'
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <NavBar isLoggedIn={true} />
       <Header firstName="Daniel" lastName="Kilcullen"/>
       <CardList cards={cards} />
     </div>

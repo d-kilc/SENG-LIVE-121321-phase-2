@@ -1,13 +1,26 @@
-function NavBar(/* ❗ your code here */) {
+// function NavBar({isLoggedIn}) {
+//     if (isLoggedIn) {    
+//         return (
+//             <nav className="nav">
+//                 <p>You're Logged In</p>
+//             </nav>
+//         )
+//     } else {    
+//         return (
+//             <nav className="nav">
+//                 <p>You're logged out.</p>
+//             </nav>
+//         )
+//     }
+// }
+
+//ternary
+function NavBar({isLoggedIn}) {
     return (
         <nav className="nav">
-            {/* <h2 className="component-name">NavBar Component</h2> */}
-            
-            {/* ❗ your code here */}
-            <p>You're Logged In</p>
+            <p>{ isLoggedIn ? "You're Logged In" : "You're Logged Out" }</p>
         </nav>
-    );
+    )
 }
 
-/* ❗ your code here */
 export default NavBar
