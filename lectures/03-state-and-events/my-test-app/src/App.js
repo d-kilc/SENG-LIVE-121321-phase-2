@@ -18,7 +18,8 @@ function App() {
   //    component hierarchy. We have 'lifted' the cards
   //    state to a suitable / scalable position in the
   //    component hierarchy.
-
+  
+  console.log(cardData)
   return (
     <div className="App">
       {/* NavBar Component */}
@@ -26,8 +27,8 @@ function App() {
 
       {/* Header Component */}
       <Header 
-        firstName="Test" 
-        lastName="User" 
+        firstName="Dan" 
+        lastName="K" 
       />
 
       {/* CardList Component */}

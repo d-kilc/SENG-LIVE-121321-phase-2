@@ -1,8 +1,12 @@
 // Accepts a Card object as a prop
+import Button from './Button'
+import { useState } from 'react'
 
 function Card({ title, content="Add Some Content Here"}) {
-    // props = { title: "My Title" }
-    // props.title => "My Title"
+    
+    const [isAdded, setAdded] = useState(false)
+    // const [isLiked, setLiked] = useState(false)
+    //const [isVisible, toggleVisibility] = useState(true)
 
     const ColoredLine = ({ color }) => (
         <hr style={{
@@ -11,14 +15,20 @@ function Card({ title, content="Add Some Content Here"}) {
                 height: 2,
                 width: "10rem"
         }} />
-    );
+    )
 
-    return (
-        <div className="card">
-            <h2 className="component-name">Card Component</h2>
+    function handleCardInfo() {
+        return (
+            <>
             <h1>{title}</h1>
             <ColoredLine color="black" />
             <p>{content}</p>
+            </>
+        )
+    }
+
+    return (
+        <div className="card">
 
             {/* Break Out Activity #1: Modify the onClick behavior of our Add to Cart <button> 
             to render only an H2 element saying “Added to Cart” in place of Card details. */}
@@ -26,10 +36,11 @@ function Card({ title, content="Add Some Content Here"}) {
             {/* Break Out Activity #2: Create a <Button /> Component to enable each Button to 
             manage its own isToggled state. 💡 To configure each <Button />, try passing a “name” 
             prop from Card.js */}
-
-            <button className="button">Add To Cart | Remove From Cart</button>
+            { isAdded ? <h2>Added to Cart.</h2> : handleCardInfo() }
+            <Button name='cart' toggleVisibility={setAdded} />
             <br />
-            <button className="button">♡ | ❤️</button>
+            {/* <Button name='like' toggleVisibility={setLiked}/> */}
+            <Button name='like'/>
         </div>
     );
 }

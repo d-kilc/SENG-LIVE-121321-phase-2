@@ -2,7 +2,7 @@ function NavBar({ isLoggedIn }) {
     // RENDERING WITH TERNARY OPERATOR
     return (
         <nav className="nav">
-            <h2 className="component-name">NavBar Component</h2>
+            {/* <h2 className="component-name">NavBar Component</h2> */}
             <p>You're Logged { isLoggedIn ? "In" : "Out" }</p>
         </nav>
     );

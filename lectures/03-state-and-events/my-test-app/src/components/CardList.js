@@ -7,8 +7,8 @@ function CardList({ cards, handleAddCard }) {
 
     return (
         <div className="card-list">
-            <h2 className="component-name">CardList Component</h2>
-            <br />
+            {/* <h2 className="component-name">CardList Component</h2> */}
+            {/* <br /> */}
             {cards.map(card => {
                 return (
                     <Card 
