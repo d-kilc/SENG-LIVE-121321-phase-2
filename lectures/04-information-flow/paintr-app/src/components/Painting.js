@@ -6,7 +6,9 @@ function Painting({ painting }) {
   const [votes, votesSetter] = useState(painting.votes);
 
   // Breakout Activity #2: Create Function to Add Votes (addVotes)
-  // ...
+  function addVotes() {
+    votesSetter(votes + 1)
+  }
   
   return (
     <div>
@@ -20,9 +22,7 @@ function Painting({ painting }) {
       </p>
 
       <div className="ui labeled button" tabIndex="0">
-
-      {/* Breakout Activity #2: Call addVotes() via onClick */}
-        <div className="ui red button">
+        <div onClick={addVotes}className="ui red button">
           <i className="heart icon"></i> Add Vote
         </div>
         <button className="ui basic red left pointing label">
@@ -30,7 +30,7 @@ function Painting({ painting }) {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Painting;
+export default Painting

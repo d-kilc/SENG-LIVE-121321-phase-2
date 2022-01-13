@@ -1,4 +1,5 @@
 function PaintingForm() {
+
     return (
         <div>
             <h1> Add a new Painting</h1>
@@ -11,7 +12,7 @@ function PaintingForm() {
                 <input type="text" placeholder="height"/><br/>
 
                 <input type="submit" value="add new painting"/>
-            </form>x
+            </form>
         </div>
     );
 }
