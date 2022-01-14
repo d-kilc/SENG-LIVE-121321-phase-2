@@ -38,6 +38,7 @@ function App() {
     // https://jkettmann.com/how-to-accidentally-mutate-state-and-why-not-to#hold-on-were-in-2020-what-about-functional-components
     setCards(newCardsArray)
   }
+  console.log(cards)
   
   return (
     <div className="App">
@@ -46,13 +47,14 @@ function App() {
       
       {/* Header Component */}
       <Header 
-        firstName="Test" 
-        lastName="User" 
+        firstName="Dan" 
+        lastName="the man" 
       />
 
       {/* Breakout Activity #2: Dynamically display a list of Added Cards as we continue to submit new Card entries. */}
       <CardForm 
         // Pass handleAddCard and cards state as props
+        handleAddCard={handleAddCard}
       />
 
       {/* CardList Component */}

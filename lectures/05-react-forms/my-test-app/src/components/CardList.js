@@ -7,9 +7,6 @@ function CardList({ cards}) {
 
     return (
         <div className="card-list">
-            <h2 className="component-name">CardList Component</h2>
-            <br />
-
             {/* Avoid direct state mutation using spread operator */}
             {[...cards].reverse().map(card => {
                 return (

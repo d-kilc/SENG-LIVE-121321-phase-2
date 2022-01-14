@@ -14,7 +14,6 @@ function Header({ firstName, lastName }) {
     
     return (
         <header className="header">
-            <h2 className="component-name">Header Component</h2>
             <h1>Hi, {firstName} {lastName}! 👋</h1>
         </header>
     );

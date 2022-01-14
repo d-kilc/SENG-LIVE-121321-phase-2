@@ -29,7 +29,6 @@ function Card({ title, content="Add Some Content Here"}) {
     function showCardDetails() {
         return (
             <>
-                <h2 className="component-name">Card Component</h2>
                 <h1>{title}</h1>
                 <ColoredLine color="black" />
                 <p>{content}</p>
